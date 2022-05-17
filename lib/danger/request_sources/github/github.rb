@@ -102,6 +102,12 @@ module Danger
         base_commit = self.pr_json["base"]["sha"]
         head_branch = self.pr_json["head"]["ref"]
         head_commit = self.pr_json["head"]["sha"]
+        puts "=======setup_danger_branches========"
+        puts base_branch
+        puts base_commit
+        puts head_branch
+        puts head_commit
+        puts "===================================="
 
         # Next, we want to ensure that we have a version of the current branch at a known location
         scm.ensure_commitish_exists_on_branch! base_branch, base_commit

@@ -38,6 +38,8 @@ module Danger
       @dangerfile_path = dangerfile if File.exist?(dangerfile)
       @base = argv.option("base")
       @head = argv.option("head")
+      puts "BASE: #{@base}"
+      puts "HEAD: #{@head}"
       @fail_on_errors = argv.option("fail-on-errors", false)
       @fail_if_no_pr = argv.option("fail-if-no-pr", false)
       @new_comment = argv.flag?("new-comment")

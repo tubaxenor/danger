@@ -16,7 +16,11 @@ module Danger
             fail_if_no_pr: nil,
             remove_previous_comments: nil)
       # Create a silent Cork instance if cork is nil, as it's likely a test
+      puts "CORK BEFORE"
+      puts cork.inspect
       cork ||= Cork::Board.new(silent: false, verbose: false)
+      puts "CORK AFTER"
+      puts cork.inspect
 
       # Run some validations
       validate!(cork, fail_if_no_pr: fail_if_no_pr)
