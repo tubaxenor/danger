@@ -73,6 +73,7 @@ module Danger
       Executor.new(ENV).run(
         base: @base,
         head: @head,
+        cork: @cork,
         dangerfile_path: @dangerfile_path,
         danger_id: @danger_id,
         new_comment: @new_comment,
